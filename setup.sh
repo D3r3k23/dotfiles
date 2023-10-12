@@ -7,12 +7,15 @@ autogen_end="# AUTOGEN: end"
 
 for dotfile in ${dotfiles[@]}; do
   if ! [ -f $dotfile ]; then # if dotfile does not exist
+    echo "creating dotfile: $dotfile"
     add_dotfile=true
   else # if dotfile exists
     if [ $(grep -xc "$autogen_begin" $dotfile) -eq 0 ]; then # if autogen not present
+      echo "adding to existing dotfile: $dotfile"
       echo "" >> $dotfile
       add_dotfile=true
     else # if autogen already present
+      echo "dotfile already set up: $dotfile"
       add_dotfile=false
     fi
   fi

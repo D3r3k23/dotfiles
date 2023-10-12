@@ -13,6 +13,6 @@ jobs:
 
       - name: Run setup.sh
         run: |
-          cd ~
-          pwd
-          ls -la
+          cd ..
+          dotfiles/setup.sh
+          source .bashrc
