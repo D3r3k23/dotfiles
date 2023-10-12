@@ -1,5 +1,3 @@
-# Run from HOME directory
-
 dotfiles=(.bashrc .vimrc)
 
 autogen_begin="# AUTOGEN: begin (dotfiles/setup.sh)"
@@ -7,7 +5,7 @@ autogen_end="# AUTOGEN: end"
 
 for dotfile in ${dotfiles[@]}; do
   if ! [ -f $dotfile ]; then # if dotfile does not exist
-    echo "creating dotfile: $dotfile"
+    echo "creating new dotfile: $dotfile"
     add_dotfile=true
   else # if dotfile exists
     if [ $(grep -xc "$autogen_begin" $dotfile) -eq 0 ]; then # if autogen not present
