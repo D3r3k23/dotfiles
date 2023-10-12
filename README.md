@@ -1,6 +1,6 @@
 # dotfiles
 
-![Test](https://github.com/D3r3k23/dotfiles/actions/workflows/test.yaml/badge.svg)
+[![Test](https://github.com/D3r3k23/dotfiles/actions/workflows/test.yaml/badge.svg)](https://github.com/D3r3k23/dotfiles/actions)
 
 ### Instructions
 1. `$ cd ~`

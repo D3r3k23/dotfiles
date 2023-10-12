@@ -17,8 +17,6 @@ jobs:
           dotfiles/setup.sh
           source .bashrc
           pwd
-          ls -la
-          ls .bashrc
+          ls -lA
           cat .bashrc
-          ls .vimrc
           cat .vimrc
