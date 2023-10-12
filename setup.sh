@@ -18,10 +18,10 @@ for dotfile in ${dotfiles[@]}; do
     fi
   fi
   if [ "$add_dotfile" == true ]; then
-    echo $autogen_begin >> $dotfile
+    echo $autogen_begin                      >> $dotfile
     echo "if [ -f dotfiles/$dotfile ]; then" >> $dotfile
-    echo "  source dotfiles/$dotfile" >> $dotfile
-    echo "fi" >> $dotfile
-    echo $autogen_end >> $dotfile
+    echo "  source dotfiles/$dotfile"        >> $dotfile
+    echo "fi"                                >> $dotfile
+    echo $autogen_end                        >> $dotfile
   fi
 done
