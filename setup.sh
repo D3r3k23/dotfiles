@@ -10,7 +10,6 @@ for dotfile in ${dotfiles[@]}; do
     add_dotfile=true
   else
     if [ $(grep -xc "$autogen_begin" $dotfile) -eq 0 ]; then
-      echo HERE
       echo "" >> $dotfile
       add_dotfile=true
     else
