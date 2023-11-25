@@ -1,4 +1,4 @@
-echo "Hello!"
+echo "Hello from D3r3k23/dotfiles!"
 
 # ls
 alias ls="ls -l -G -L -h -v --group-directories-first --color=always"
