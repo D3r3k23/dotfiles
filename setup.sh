@@ -1,4 +1,4 @@
-dotfiles=(.bashrc .vimrc .inputrc)
+dotfiles=(.bashrc .vimrc)
 
 autogen_begin="# AUTOGEN: begin (dotfiles/setup.sh)"
 autogen_end="# AUTOGEN: end"
