@@ -11,5 +11,9 @@ alias grep="grep -R --color=auto"
 alias fgrep="fgrep -R --color=auto"
 alias egrep="egrep -R --color=auto"
 
-# python
+# Python
 alias python='python3'
+
+# Docker
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
