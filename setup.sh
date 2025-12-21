@@ -1,9 +1,10 @@
-dotfiles=(.bashrc .vimrc)
+dotfiles_dir="dotfiles" # ".dotfiles"
+dotfiles_list=(.bashrc .vimrc)
 
 autogen_begin="# AUTOGEN: begin (dotfiles/setup.sh)"
 autogen_end="# AUTOGEN: end"
 
-for dotfile in ${dotfiles[@]}; do
+for dotfile in ${dotfiles_list[@]}; do
   if ! [ -f $dotfile ]; then # if dotfile does not exist
     echo "creating new dotfile: $dotfile"
     add_dotfile=true
@@ -18,10 +19,10 @@ for dotfile in ${dotfiles[@]}; do
     fi
   fi
   if [ "$add_dotfile" == true ]; then
-    echo $autogen_begin                      >> $dotfile
-    echo "if [ -f dotfiles/$dotfile ]; then" >> $dotfile
-    echo "  source dotfiles/$dotfile"        >> $dotfile
-    echo "fi"                                >> $dotfile
-    echo $autogen_end                        >> $dotfile
+    echo $autogen_begin                           >> $dotfile
+    echo "if [ -f $dotfiles_dir/$dotfile ]; then" >> $dotfile
+    echo "  source $dotfiles_dir/$dotfile"        >> $dotfile
+    echo "fi"                                     >> $dotfile
+    echo $autogen_end                             >> $dotfile
   fi
 done
