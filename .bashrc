@@ -6,6 +6,9 @@ alias la="ls -A"
 alias ll="ls -H"
 alias lla="ll -A"
 
+# du - directory size
+alias du="du -sh"
+
 # grep
 alias grep="grep -R --color=auto"
 alias fgrep="fgrep -R --color=auto"
