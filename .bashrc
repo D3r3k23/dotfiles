@@ -21,4 +21,6 @@ alias python="python3"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 alias dcr="docker compose restart"
-alias dcp="docker compose pull"
+
+alias dc-pull="docker compose pull"
+alias dc-update="dc-pull && dcu"
